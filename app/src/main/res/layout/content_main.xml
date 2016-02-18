@@ -10,10 +10,65 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="teamdynamite.pizzapoint.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+    android:background="#6a0d0d">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PIZZAPOS!" />
+        android:text="PIZZAPOS!"
+        android:textSize="60sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/passwordText"
+        android:layout_marginBottom="254dp"
+        android:hint= "Enter Password"
+        android:textColor="#ffffff"
+        android:textColorHighlight="#000000"
+        android:password="true"
+        android:inputType="textPassword"
+        android:foreground="#ffffff"
+        android:editable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColorHint="#b5b5b5"
+        android:textSize="40sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userNameText"
+        android:hint= "Enter User Name"
+        android:layout_marginBottom="80dp"
+        android:foreground="#ffffff"
+        android:editable="true"
+        android:textColorHint="#b5b5b5"
+        android:textSize="40sp"
+        android:layout_above="@+id/passwordText"
+        android:layout_alignStart="@+id/textView"
+        android:inputType="text"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="    LOGIN    "
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="108dp"
+        android:textSize="40sp"
+        android:nestedScrollingEnabled="false"
+        android:background="#d4d4d4"
+        android:singleLine="false"
+        android:enabled="true"
+        android:clickable="true" />
+
+
 </RelativeLayout>
