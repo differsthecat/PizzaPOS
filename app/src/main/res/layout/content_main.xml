@@ -11,17 +11,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="teamdynamite.pizzapoint.MainActivity"
     tools:showIn="@layout/activity_main"
-    android:background="#6a0d0d">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PIZZAPOS!"
-        android:textSize="60sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="#ffffff"
-        android:id="@+id/textView" />
+    android:background="#b25b5b">
 
     <EditText
         android:layout_width="wrap_content"
@@ -45,15 +35,17 @@
         android:layout_height="wrap_content"
         android:id="@+id/userNameText"
         android:hint= "Enter User Name"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="81dp"
         android:foreground="#ffffff"
         android:editable="true"
         android:textColorHint="#b5b5b5"
         android:textSize="40sp"
-        android:layout_above="@+id/passwordText"
-        android:layout_alignStart="@+id/textView"
         android:inputType="text"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:layout_above="@+id/passwordText"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false" />
 
     <Button
         android:layout_width="wrap_content"
@@ -69,6 +61,19 @@
         android:singleLine="false"
         android:enabled="true"
         android:clickable="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/luca"
+        android:minHeight="40dp"
+        android:minWidth="60dp"
+        android:layout_alignStart="@+id/button"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/userNameText"
+        android:layout_alignParentTop="true" />
 
 
 </RelativeLayout>
