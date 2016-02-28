@@ -68,5 +68,16 @@
         android:textColor="#ffffff"
         android:textSize="40dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="**Incorrect Employee ID**"
+        android:id="@+id/IncorrectEmpId"
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:textSize="25dp"
+        android:textColor="#ff9c9c" />
+
 
 </RelativeLayout>
