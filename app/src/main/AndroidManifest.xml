@@ -11,7 +11,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".New_Order"
             android:label="@string/title_activity_new__order"
@@ -29,6 +29,18 @@
         <activity
             android:name=".MainMenu"
             android:label="@string/title_activity_main_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SoupsSalads"
+            android:label="@string/title_activity_soups_salads"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RoastedVeggieWrap"
+            android:label="@string/title_activity_roasted_veggie_wrap"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ViewOrder"
+            android:label="@string/title_activity_view_order"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -9,27 +9,23 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="teamdynamite.pizzapoint.MainMenu"
-    tools:showIn="@layout/activity_main_menu"
+    tools:context="teamdynamite.pizzapoint.SoupsSalads"
+    tools:showIn="@layout/activity_soups_salads"
     android:background="#b25b5b">
 
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:columnCount="3"
-        android:rowCount="6"
-        android:id="@+id/gridLayout"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:rowCount="3"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:alignmentMode="alignBounds">
+        android:layout_centerHorizontal="true">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:text="Soups and Salads"
-            android:id="@+id/SoupsSaladsBtn"
+            android:text="Roasted Veggie Wrap"
+            android:id="@+id/veggieWrapBtn"
             android:layout_row="0"
             android:layout_column="0"
             android:clickable="true"
@@ -40,7 +36,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subs and Sandwhiches"
+            android:text="Antipasto"
             android:id="@+id/SubsSandBtn"
             android:layout_gravity="center|fill"
             android:layout_row="0"
@@ -51,7 +47,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Classics"
+            android:text="Caesar Salad"
             android:id="@+id/classicsBtn"
             android:layout_row="0"
             android:layout_column="2"
@@ -62,7 +58,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:text="For The Kids"
+            android:text="Garden Salad"
             android:id="@+id/button5"
             android:layout_row="1"
             android:layout_column="0"
@@ -73,7 +69,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Specialty Pizzas"
+            android:text="Greek Salad"
             android:id="@+id/button6"
             android:layout_row="1"
             android:layout_column="1"
@@ -84,7 +80,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Custom Pzzas"
+            android:text="Insalata Caprese"
             android:id="@+id/button7"
             android:layout_row="1"
             android:layout_column="2"
@@ -95,7 +91,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:text="Calzones"
+            android:text="The Wedge"
             android:id="@+id/buttons2"
             android:layout_row="2"
             android:layout_column="0"
@@ -106,7 +102,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pizza Pops"
+            android:text="Tuna/Chicken Salad"
             android:id="@+id/buttons3"
             android:layout_row="2"
             android:layout_column="1"
@@ -117,7 +113,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Apps + Sides"
+            android:text="Soups + Salads"
             android:id="@+id/buttons6"
             android:layout_row="2"
             android:layout_column="2"
@@ -125,73 +121,25 @@
             android:backgroundTint="#eaeaea"
             android:textSize="25dp"
             android:typeface="serif" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:text="Drinks"
-            android:id="@+id/buttons5"
-            android:layout_row="3"
-            android:layout_column="0"
-            android:layout_gravity="center|fill"
-            android:backgroundTint="#eaeaea"
-            android:textSize="25dp"
-            android:typeface="serif" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Specialty Dishes"
-            android:id="@+id/buttons4"
-            android:layout_row="3"
-            android:layout_column="1"
-            android:layout_gravity="center|fill"
-            android:backgroundTint="#eaeaea"
-            android:textSize="25dp"
-            android:typeface="serif" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:id="@+id/buttons9"
-            android:layout_row="3"
-            android:layout_column="2"
-            android:layout_gravity="center|fill"
-            android:backgroundTint="#eaeaea"
-            android:textSize="25dp"
-            android:typeface="serif" />
-
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:text="BACK"
-            android:id="@+id/buttons8"
-            android:layout_row="4"
-            android:layout_column="0"
-            android:layout_gravity="center|fill"
-            android:textSize="25dp"
-            android:backgroundTint="#fdf8c5"
-            android:typeface="serif" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="View Order"
-            android:id="@+id/buttons10"
-            android:layout_row="4"
-            android:layout_column="2"
-            android:layout_gravity="center|fill"
-            android:textSize="25dp"
-            android:backgroundTint="#fdf8c5"
-            android:typeface="serif" />
 
     </GridLayout>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
-        android:src="@drawable/luca"
+        android:id="@+id/imageView4"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/luca"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soups and Salads"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/imageView4"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="60dp"
+        android:typeface="serif" />
 </RelativeLayout>

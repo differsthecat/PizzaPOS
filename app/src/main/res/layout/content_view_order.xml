@@ -9,34 +9,34 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="teamdynamite.pizzapoint.splash"
-    tools:showIn="@layout/activity_splash"
+    tools:context="teamdynamite.pizzapoint.ViewOrder"
+    tools:showIn="@layout/activity_view_order"
     android:background="#b25b5b">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="PizzaPOS"
-        android:id="@+id/textView"
-        android:textColor="#ffffff"
-        android:textSize="90dp"
+        android:id="@+id/imageView6"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="155dp"
-        android:typeface="serif"
-        android:textStyle="bold" />
+        android:src="@drawable/luca"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Point of Sale System"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/textView"
+        android:text="Order Details"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/imageView6"
         android:layout_centerHorizontal="true"
         android:textColor="#ffffff"
-        android:textSize="40dp"
+        android:textSize="60dp"
         android:typeface="serif" />
-</RelativeLayout>
 
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView8"
+        android:layout_alignParentStart="true"></GridLayout>
+
+</RelativeLayout>

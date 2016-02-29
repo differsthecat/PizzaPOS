@@ -5,4 +5,7 @@
     <string name="title_activity_new__order">New_Order</string>
     <string name="title_activity_splash">splash</string>
     <string name="title_activity_main_menu">MainMenu</string>
+    <string name="title_activity_soups_salads">SoupsSalads</string>
+    <string name="title_activity_roasted_veggie_wrap">RoastedVeggieWrap</string>
+    <string name="title_activity_view_order">ViewOrder</string>
 </resources>
