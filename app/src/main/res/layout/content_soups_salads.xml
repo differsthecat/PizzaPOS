@@ -19,7 +19,8 @@
         android:columnCount="3"
         android:rowCount="3"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:id="@+id/gridLayout2">
 
         <Button
             android:layout_width="wrap_content"
@@ -37,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Antipasto"
-            android:id="@+id/SubsSandBtn"
+            android:id="@+id/antipastoBtn"
             android:layout_gravity="center|fill"
             android:layout_row="0"
             android:layout_column="1"
@@ -81,7 +82,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Insalata Caprese"
-            android:id="@+id/button7"
+            android:id="@+id/insalataBtn"
             android:layout_row="1"
             android:layout_column="2"
             android:layout_gravity="center|fill"
@@ -142,4 +143,21 @@
         android:textColor="#ffffff"
         android:textSize="60dp"
         android:typeface="serif" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/backButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="57dp"
+        android:clickable="true"
+        android:typeface="serif"
+        android:textSize="35dp"
+        android:minHeight="20dp"
+        android:maxHeight="100dp"
+        android:minWidth="80dp"
+        android:maxWidth="150dp"
+        android:backgroundTint="#eaeaea" />
 </RelativeLayout>

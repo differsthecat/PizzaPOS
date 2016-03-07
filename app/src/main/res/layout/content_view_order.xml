@@ -33,10 +33,49 @@
         android:textSize="60dp"
         android:typeface="serif" />
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/textView8"
-        android:layout_alignParentStart="true"></GridLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Remove  "
+        android:id="@+id/button2"
+        android:layout_marginBottom="61dp"
+        android:typeface="serif"
+        android:enabled="true"
+        android:textSize="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  back   "
+        android:id="@+id/backButton"
+        android:layout_alignTop="@+id/button2"
+        android:layout_alignParentStart="true"
+        android:textSize="40dp"
+        android:typeface="serif" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complete "
+        android:id="@+id/button3"
+        android:textSize="40dp"
+        android:layout_alignTop="@+id/button2"
+        android:layout_alignParentEnd="true"
+        android:typeface="serif" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Order Total:"
+        android:id="@+id/textView11"
+        android:layout_marginBottom="146dp"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="35dp" />
 
 </RelativeLayout>

@@ -19,6 +19,8 @@ public class SoupsSalads extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Button veggieWrap = (Button) findViewById(R.id.veggieWrapBtn);
+        Button antipasto = (Button) findViewById(R.id.antipastoBtn);
+        Button insalataCaprese = (Button) findViewById(R.id.insalataBtn);
 
         //Clicking "Soups and Salads opens up the sub menu of Soups/Salads.
         veggieWrap.setOnClickListener(new View.OnClickListener() {
@@ -26,6 +28,20 @@ public class SoupsSalads extends AppCompatActivity {
                 startActivity(new Intent(SoupsSalads.this, RoastedVeggieWrap.class));
             }
         });
+
+        antipasto.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(SoupsSalads.this, Antipasto.class));
+            }
+        });
+
+        insalataCaprese.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(SoupsSalads.this, InsalataCaprese.class));
+            }
+        });
+
+
     }
 
 }

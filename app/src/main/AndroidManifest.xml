@@ -41,6 +41,18 @@
         <activity
             android:name=".ViewOrder"
             android:label="@string/title_activity_view_order"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Antipasto"
+            android:label="@string/title_activity_antipasto"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CaesarSalad"
+            android:label="@string/title_activity_caesar_salad"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".InsalataCaprese"
+            android:label="@string/title_activity_insalata_caprese"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

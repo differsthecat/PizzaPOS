@@ -8,4 +8,7 @@
     <string name="title_activity_soups_salads">SoupsSalads</string>
     <string name="title_activity_roasted_veggie_wrap">RoastedVeggieWrap</string>
     <string name="title_activity_view_order">ViewOrder</string>
+    <string name="title_activity_antipasto">Antipasto</string>
+    <string name="title_activity_caesar_salad">CaesarSalad</string>
+    <string name="title_activity_insalata_caprese">InsalataCaprese</string>
 </resources>

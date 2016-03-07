@@ -9,62 +9,59 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="teamdynamite.pizzapoint.RoastedVeggieWrap"
-    tools:showIn="@layout/activity_roasted_veggie_wrap"
+    tools:context="teamdynamite.pizzapoint.Antipasto"
+    tools:showIn="@layout/activity_antipasto"
     android:background="#b25b5b">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Roasted Veggie Wrap"
-        android:id="@+id/veggieWrapText"
-        android:textColor="#ffffff"
-        android:textSize="60dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="89dp"
-        android:typeface="serif" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView5"
+        android:id="@+id/imageView7"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/luca"/>
+        android:src="@drawable/luca" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Portabella mushrooms, fresh mozzarella, Roasted red peppers artichokes and humus on a wrap"
-        android:id="@+id/descriptionText"
-        android:layout_below="@+id/veggieWrapText"
+        android:text="Antipasto"
+        android:id="@+id/antipastoText"
+        android:layout_below="@+id/imageView7"
         android:layout_centerHorizontal="true"
         android:textColor="#ffffff"
-        android:textSize="30dp"
-        android:typeface="serif"
-        android:textStyle="italic"
-        android:textAlignment="center" />
+        android:textSize="60dp"
+        android:typeface="serif" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="$8.95"
-        android:id="@+id/priceText"
-        android:typeface="serif"
-        android:textSize="40dp"
+        android:id="@+id/textView9"
+        android:layout_below="@+id/antipastoText"
+        android:layout_centerHorizontal="true"
+        android:text="Italian meats, cheese and vegetables served over greens"
+        android:textSize="30dp"
         android:textColor="#ffffff"
-        android:layout_below="@+id/descriptionText"
-        android:layout_centerHorizontal="true" />
+        android:typeface="serif" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="$12.95"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/textView9"
+        android:layout_centerHorizontal="true"
+        android:typeface="serif"
+        android:textColor="#ffffff"
+        android:textSize="40dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:id="@+id/VeggieWrapComments"
+        android:id="@+id/antipastoComments"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:textSize="30dp"
@@ -81,7 +78,7 @@
         android:layout_height="70dp"
         android:text="  Add to Order  "
         android:id="@+id/addtToOrder"
-        android:layout_below="@+id/VeggieWrapComments"
+        android:layout_below="@+id/antipastoComments"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
         android:typeface="serif"
@@ -97,7 +94,10 @@
         android:id="@+id/backButton"
         android:layout_below="@+id/addtToOrder"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="49dp"
+        android:layout_marginTop="51dp"
         android:textSize="25dp"
         android:typeface="serif" />
+
 </RelativeLayout>
+
+
