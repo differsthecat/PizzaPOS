@@ -18,6 +18,7 @@ public class SoupsSalads extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Button backBtn = (Button) findViewById(R.id.backBtn);
         Button veggieWrap = (Button) findViewById(R.id.veggieWrapBtn);
         Button antipasto = (Button) findViewById(R.id.antipastoBtn);
         Button insalataCaprese = (Button) findViewById(R.id.insalataBtn);
@@ -41,6 +42,12 @@ public class SoupsSalads extends AppCompatActivity {
             }
         });
 
+        //Clicking "BACK" goes back to the main menu.
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(SoupsSalads.this, MainMenu.class));
+            }
+        });
 
     }
 

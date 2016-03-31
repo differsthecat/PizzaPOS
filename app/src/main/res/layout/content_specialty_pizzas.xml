@@ -10,151 +10,147 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="teamdynamite.pizzapoint.SoupsSalads"
-    tools:showIn="@layout/activity_soups_salads"
+    tools:showIn="@layout/activity_specialty_pizzas"
     android:background="#b25b5b">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/luca" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Specialty Pizzas"
+        android:id="@+id/specialtyPizzasTitle"
+        android:layout_below="@+id/imageView10"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="60dp"
+        android:typeface="serif" />
 
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:columnCount="3"
-        android:rowCount="4"
-        android:layout_below="@+id/soupsSaladsTitle"
+        android:rowCount="3"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/gridLayout2">
+        android:id="@+id/subsGridLayout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/specialtyPizzasTitle"
+        android:alignmentMode="alignBounds">
 
         <Button
             android:layout_width="300dp"
-            android:layout_height="120dp"
-            android:text="Roasted Veggie Wrap"
-            android:id="@+id/veggieWrapBtn"
+            android:layout_height="150dp"
+            android:text="Luca Special"
+            android:id="@+id/lucaSpecialBtn"
             android:layout_row="0"
             android:layout_column="0"
             android:clickable="true"
             android:textSize="25dp"
             android:layout_gravity="top|center|fill"
             android:backgroundTint="#eaeaea"
-            android:typeface="serif" />
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="120dp"
-            android:text="Antipasto"
-            android:id="@+id/antipastoBtn"
-            android:layout_gravity="center|fill"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:textSize="25dp"
-            android:backgroundTint="#eaeaea"
-            android:typeface="serif" />
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="120dp"
-            android:text="Caesar Salad"
-            android:id="@+id/classicsBtn"
-            android:layout_row="0"
-            android:layout_column="2"
-            android:layout_gravity="center|fill"
-            android:backgroundTint="#eaeaea"
-            android:textSize="25dp"
-            android:typeface="serif" />
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="120dp"
-            android:text="Garden Salad"
-            android:id="@+id/button5"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:textSize="25dp"
-            android:backgroundTint="#eaeaea"
-            android:layout_gravity="center|fill"
-            android:typeface="serif" />
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="120dp"
-            android:text="Greek Salad"
-            android:id="@+id/button6"
-            android:layout_row="1"
-            android:layout_column="1"
-            android:layout_gravity="center|fill"
-            android:backgroundTint="#eaeaea"
-            android:textSize="25dp"
-            android:typeface="serif" />
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="120dp"
-            android:text="Insalata Caprese"
-            android:id="@+id/insalataBtn"
-            android:layout_row="1"
-            android:layout_column="2"
-            android:layout_gravity="center|fill"
-            android:backgroundTint="#eaeaea"
-            android:textSize="25dp"
-            android:typeface="serif" />
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="120dp"
-            android:text="The Wedge"
-            android:id="@+id/buttons2"
-            android:layout_row="2"
-            android:layout_column="0"
-            android:layout_gravity="center|fill"
-            android:backgroundTint="#eaeaea"
-            android:textSize="25dp"
-            android:typeface="serif" />
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="120dp"
-            android:text="Tuna/Chicken Salad"
-            android:id="@+id/buttons3"
-            android:layout_row="2"
-            android:layout_column="1"
-            android:layout_gravity="center|fill"
-            android:backgroundTint="#eaeaea"
-            android:textSize="25dp"
-            android:typeface="serif" />
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="120dp"
-            android:text="Soups + Salads"
-            android:id="@+id/buttons6"
-            android:layout_row="2"
-            android:layout_column="2"
-            android:layout_gravity="center|fill"
-            android:backgroundTint="#eaeaea"
-            android:textSize="25dp"
-            android:typeface="serif" />
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="120dp"
-            android:layout_gravity="center|fill"
-            android:text="Back"
-            android:layout_row="3"
-            android:layout_column="0"
-            android:id="@+id/backBtn"
-            android:clickable="true"
             android:typeface="serif"
+            android:width="50dp" />
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:text="La Margherita"
+            android:id="@+id/laMarheritaBtn"
+            android:layout_gravity="center|fill"
+            android:layout_row="0"
+            android:layout_column="1"
             android:textSize="25dp"
-            android:backgroundTint="#eaeaea" />
+            android:backgroundTint="#eaeaea"
+            android:typeface="serif" />
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:text="Pizza Quattro Formagio"
+            android:id="@+id/quatroBtn"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_gravity="center|fill"
+            android:backgroundTint="#eaeaea"
+            android:textSize="25dp"
+            android:typeface="serif"
+            android:textAlignment="center" />
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:text="Quattro Stagioni"
+            android:id="@+id/quattroStagioniBtn"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:textSize="25dp"
+            android:backgroundTint="#eaeaea"
+            android:layout_gravity="center|fill"
+            android:typeface="serif" />
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:text="White Pizza"
+            android:id="@+id/whitePizzaBtn"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="center|fill"
+            android:backgroundTint="#eaeaea"
+            android:textSize="25dp"
+            android:typeface="serif" />
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:text="Barbecue Chicken"
+            android:id="@+id/bbqChickenBtn"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_gravity="center|fill"
+            android:backgroundTint="#eaeaea"
+            android:textSize="25dp"
+            android:typeface="serif" />
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:text="Tuscan Pizza"
+            android:id="@+id/tuscanPizzaBtn"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_gravity="center|fill"
+            android:backgroundTint="#eaeaea"
+            android:textSize="25dp"
+            android:typeface="serif" />
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:text="Hawaiian Pizza"
+            android:id="@+id/hawaiianPizzaBtn"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_gravity="center|fill"
+            android:backgroundTint="#eaeaea"
+            android:textSize="25dp"
+            android:typeface="serif" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:text="BACK"
+            android:id="@+id/backBtn"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_gravity="center|fill"
+            android:backgroundTint="#eaeaea"
+            android:textSize="25dp"
+            android:typeface="serif"
+            android:width="200dp" />
+
 
     </GridLayout>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView4"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/luca"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Soups and Salads"
-        android:id="@+id/soupsSaladsTitle"
-        android:layout_below="@+id/imageView4"
-        android:layout_centerHorizontal="true"
-        android:textColor="#ffffff"
-        android:textSize="60dp"
-        android:typeface="serif" />
-
 </RelativeLayout>

@@ -43,6 +43,30 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".InsalataCaprese"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SubsSandwhiches"
+            android:label="@string/title_activity_subs_sandwhiches"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Classics"
+            android:label="@string/title_activity_classics"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ForTheKids"
+            android:label="@string/title_activity_for_the_kids"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SpecialtyPizzas"
+            android:label="@string/title_activity_specialty_pizzas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CustomPizzas"
+            android:label="@string/title_activity_custom_pizzas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AppsAndSides"
+            android:label="@string/title_activity_apps_and_sides"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

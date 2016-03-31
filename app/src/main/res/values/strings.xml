@@ -11,4 +11,10 @@
     <string name="title_activity_antipasto">Antipasto</string>
     <string name="title_activity_caesar_salad">CaesarSalad</string>
     <string name="title_activity_insalata_caprese">InsalataCaprese</string>
+    <string name="title_activity_subs_sandwhiches">SubsSandwhiches</string>
+    <string name="title_activity_classics">Classics</string>
+    <string name="title_activity_for_the_kids">ForTheKids</string>
+    <string name="title_activity_specialty_pizzas">SpecialtyPizzas</string>
+    <string name="title_activity_custom_pizzas">CustomPizzas</string>
+    <string name="title_activity_apps_and_sides">AppsAndSides</string>
 </resources>
