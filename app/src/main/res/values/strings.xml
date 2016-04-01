@@ -17,4 +17,7 @@
     <string name="title_activity_specialty_pizzas">SpecialtyPizzas</string>
     <string name="title_activity_custom_pizzas">CustomPizzas</string>
     <string name="title_activity_apps_and_sides">AppsAndSides</string>
+    <string name="title_activity_clazones">Clazones</string>
+    <string name="title_activity_calzones">Calzones</string>
+    <string name="title_activity_specialty_dishes">SpecialtyDishes</string>
 </resources>

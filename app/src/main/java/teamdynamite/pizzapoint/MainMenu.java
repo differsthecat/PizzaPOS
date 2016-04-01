@@ -82,6 +82,12 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
+        CalzonesBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainMenu.this, Calzones.class));
+            }
+        });
+
         appsSidesBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(MainMenu.this, AppsAndSides.class));

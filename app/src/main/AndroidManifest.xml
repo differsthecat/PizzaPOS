@@ -67,6 +67,14 @@
         <activity
             android:name=".AppsAndSides"
             android:label="@string/title_activity_apps_and_sides"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Calzones"
+            android:label="@string/title_activity_calzones"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SpecialtyDishes"
+            android:label="@string/title_activity_specialty_dishes"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
