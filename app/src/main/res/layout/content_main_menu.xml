@@ -40,7 +40,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subs and Sandwhiches"
+            android:text="Subs and Sandwiches"
             android:id="@+id/SubsSandBtn"
             android:layout_gravity="center|fill"
             android:layout_row="0"
