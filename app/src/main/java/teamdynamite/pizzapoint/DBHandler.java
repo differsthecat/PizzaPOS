@@ -24,6 +24,7 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String KEY_ITEM_NAME = "item_name";
     private static final String KEY_PRICE = "price";
     private static final String KEY_COMMENTS = "comments";
+    //Extras will handle special items like toppings.
     private static final String KEY_EXTRAS = "extras";
 
 
@@ -42,7 +43,7 @@ public class DBHandler extends SQLiteOpenHelper {
         //Creates the 'Items' table
         String CREATE_TABLE_ITEM = "CREATE TABLE" + TABLE_ITEM + "("
                 + KEY_ITEM_NAME + " TEXT, " + KEY_PRICE + " REAL, " + KEY_COMMENTS + " TEXT, "
-                + KEY_EXTRAS + " TEXT, " + "FOREIGN KEY (" + KEY_ORDER_NUM + ") REFERNECES "
+                + KEY_EXTRAS + " TEXT, " + "FOREIGN KEY (" + KEY_ORDER_NUM + ") REFERENECES "
                 + TABLE_ORDER + "(" + KEY_ORDER_NUMBER + ")" +");" ;
         db.execSQL(CREATE_TABLE_ITEM);
 
