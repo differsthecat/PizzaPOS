@@ -25,6 +25,7 @@
         </activity>
         <activity
             android:name=".MainMenu"
+            android:parentActivityName=".New_Order"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SoupsSalads"
@@ -75,7 +76,7 @@
         <activity
             android:name=".SpecialtyDishes"
             android:label="@string/title_activity_specialty_dishes"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

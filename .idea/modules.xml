@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PizzaPoint.iml" filepath="$PROJECT_DIR$/PizzaPoint.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PizzaPOS.iml" filepath="$PROJECT_DIR$/PizzaPOS.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
