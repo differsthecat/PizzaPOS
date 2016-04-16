@@ -26,6 +26,10 @@ local.properties
 .idea/scopes/scope_settings.xml
 .idea/vcs.xml
 *.iml
+-.gradle
+ -/local.properties
+ -/.idea/workspace.xml
+ -/.idea/libraries
 
 # OS-specific files
 .DS_Store
