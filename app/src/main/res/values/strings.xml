@@ -20,4 +20,5 @@
     <string name="title_activity_clazones">Clazones</string>
     <string name="title_activity_calzones">Calzones</string>
     <string name="title_activity_specialty_dishes">SpecialtyDishes</string>
+    <string name="title_activity_open_order">OpenOrder</string>
 </resources>

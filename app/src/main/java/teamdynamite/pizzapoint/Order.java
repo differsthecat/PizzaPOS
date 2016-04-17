@@ -2,33 +2,47 @@ package teamdynamite.pizzapoint;
 
 public class Order {
 
-    private int orderNum;
+    private int orderNumber;
     private String openDate;
+    private int isOpen;
 
     public Order(){
 
     }
-    public Order(int orderNum, String openDate){
+    public Order(int orderNum, String openDate, int isOpen){
 
-        this.orderNum = orderNum;
+        this.orderNumber = orderNum;
         this.openDate = openDate;
+        this.isOpen = isOpen;
 
     }
 
     public void setOrderNum(int orderNum){
-        this.orderNum = orderNum;
+
+        this.orderNumber = orderNum;
     }
 
     public void setOpenDate(String openDate){
-        this.openDate = openDate;
 
+        this.openDate = openDate;
     }
 
-    public int getOrderNum(){
-        return orderNum;
+    public void setIsOpen(int isOpen){
+
+        this.isOpen = isOpen;
+
+    }
+    public int getOrderNumber(){
+
+        return orderNumber;
     }
     public String getOpenDate(){
+
         return openDate;
+    }
+    public int getIsOpen(){
+
+        return isOpen;
     }
 }
 

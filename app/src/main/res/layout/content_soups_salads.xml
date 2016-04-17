@@ -157,4 +157,16 @@
         android:textSize="60dp"
         android:typeface="serif" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/orderNumberDisp"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_alignParentStart="true"
+        android:textStyle="italic"
+        android:textSize="30dp"
+        android:typeface="serif"
+        android:textColor="#ffffff" />
+
 </RelativeLayout>
