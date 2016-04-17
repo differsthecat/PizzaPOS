@@ -132,11 +132,8 @@ public class DBHandler extends SQLiteOpenHelper {
     }
     public Cursor orderListView(){
         SQLiteDatabase db = this.getReadableDatabase();
-        String query = "SELECT order_num, open_date FROM " + TABLE_ORDER + " WHERE is_open = 1 ";
+        String query = "SELECT order_num AS _id, open_date FROM " + TABLE_ORDER + " WHERE is_open = 1 ";
         Cursor c = db.rawQuery(query, null);
-        if ( c != null){
-            c.moveToFirst();
-        }
         return c;
     }
 

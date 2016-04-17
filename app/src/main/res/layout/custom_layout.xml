@@ -3,19 +3,52 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/orderNumT" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/orderDateT" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/orderNumT"
+            android:textSize="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/t"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/orderDateT"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/textView6"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Number: "
+            android:id="@+id/t"
+            android:layout_alignBottom="@+id/orderNumT"
+            android:layout_alignParentStart="true"
+            android:textSize="20dp"
+            android:textColor="#facfcf" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time Opened: "
+            android:id="@+id/textView6"
+            android:layout_alignTop="@+id/orderNumT"
+            android:layout_toEndOf="@+id/orderNumT"
+            android:layout_marginStart="62dp"
+            android:textColor="#facfcf"
+            android:textSize="20dp" />
+    </RelativeLayout>
 
 </LinearLayout>

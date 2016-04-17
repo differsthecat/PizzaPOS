@@ -33,42 +33,12 @@
         android:layout_marginTop="89dp"
         android:typeface="serif" />
 
-    <EditText
+    <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/findOrderNum"
-        android:hint="Order #"
-        android:inputType="number"
-        android:textSize="30sp"
-        android:textColorHint="#ede9e9"
-        android:textColor="#ffffff"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Enter Order Number:"
-        android:id="@+id/textView6"
+        android:id="@+id/listView"
         android:layout_below="@+id/openOrdersText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp"
-        android:textColor="#ffffff"
-        android:textSize="30dp"
-        android:typeface="serif"
-        android:textStyle="italic" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Open Order"
-        android:id="@+id/openOrderBtn"
-        android:layout_below="@+id/findOrderNum"
-        android:layout_centerHorizontal="true"
-        android:textSize="30dp"
-        android:padding="20dp"
-        android:typeface="serif" />
-
+        android:layout_marginTop="47dp" />
 
 </RelativeLayout>
