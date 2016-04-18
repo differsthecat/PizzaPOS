@@ -21,4 +21,5 @@
     <string name="title_activity_calzones">Calzones</string>
     <string name="title_activity_specialty_dishes">SpecialtyDishes</string>
     <string name="title_activity_open_order">OpenOrder</string>
+    <string name="title_activity_italian_beef">italianBeef</string>
 </resources>

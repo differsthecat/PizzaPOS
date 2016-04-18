@@ -53,9 +53,9 @@ public class OpenOrder extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 TextView orderNum = (TextView) view.findViewById(R.id.orderNumT);
-                String studentId = orderNum.getText().toString();
+                String itemId = orderNum.getText().toString();
                 Intent objIndent = new Intent(getApplicationContext(),MainMenu.class);
-                objIndent.putExtra("Order Number", Integer.parseInt( studentId));
+                objIndent.putExtra("Order Number", Integer.parseInt( itemId));
                 startActivity(objIndent);
             }
         });

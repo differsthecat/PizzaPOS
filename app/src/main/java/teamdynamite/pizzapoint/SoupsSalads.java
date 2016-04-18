@@ -54,7 +54,15 @@ public class SoupsSalads extends AppCompatActivity {
 
         antipasto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(SoupsSalads.this, Antipasto.class));
+                Bundle bundle = new Bundle();
+                bundle.putInt("Order Number", orderNumber);
+
+                //Create the Intent
+                Intent intentBundle = new Intent(SoupsSalads.this, Antipasto.class);
+                intentBundle.putExtras(bundle);
+
+                //Open Main Order Menu, along with the extra data
+                startActivity(intentBundle);
             }
         });
 

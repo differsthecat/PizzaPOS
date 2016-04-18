@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
+import android.view.animation.TranslateAnimation;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.os.Bundle;
@@ -34,8 +35,8 @@ public class DBHandler extends SQLiteOpenHelper {
     public static final String KEY_ROWID = "_id";
     public static final int COL_ROWID = 0;
 
-    public static final String KEY_ORDER_NUMBER= "order_num";
-    public static final String KEY_DATE= "open_date";
+    public static final String KEY_ORDER_NUMBER = "order_num";
+    public static final String KEY_DATE = "open_date";
     public static final String KEY_ISOPEN = "is_open";
 
     //Item table name
@@ -48,7 +49,6 @@ public class DBHandler extends SQLiteOpenHelper {
     public static final String KEY_COMMENTS = "comments";
     //Extras will handle special items like toppings.
     public static final String KEY_EXTRAS = "extras";
-
 
 
     public DBHandler(Context context) {
@@ -74,7 +74,7 @@ public class DBHandler extends SQLiteOpenHelper {
                 + KEY_COMMENTS + " TEXT, "
                 + KEY_EXTRAS + " TEXT, "
                 + "FOREIGN KEY (" + KEY_ORDER_NUM + ") REFERENCES "
-                + TABLE_ORDER + "(" + KEY_ORDER_NUMBER + ")" +");" ;
+                + TABLE_ORDER + "(" + KEY_ORDER_NUMBER + ")" + ");";
         db.execSQL(CREATE_TABLE_ITEM);
 
 
@@ -88,6 +88,7 @@ public class DBHandler extends SQLiteOpenHelper {
         onCreate(db);
 
     }
+
     public DBHandler open() {
         SQLiteDatabase db = this.getWritableDatabase();
         return this;
@@ -95,7 +96,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
 
     // Adding new order
-    public void addOrder(Order order){
+    public void addOrder(Order order) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(KEY_ORDER_NUMBER, order.getOrderNumber()); // Order Number
@@ -106,8 +107,21 @@ public class DBHandler extends SQLiteOpenHelper {
 
     }
 
+    public void addItem(Item item) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(KEY_ORDER_NUM, item.getOrderNum());
+        values.put(KEY_ITEM_NAME, item.getItemName());
+        values.put(KEY_PRICE, item.getPrice());
+        values.put(KEY_COMMENTS, item.getComments());
+        values.put(KEY_EXTRAS, item.getExtras());
+        //Inserting row
+        db.insert(TABLE_ITEM, null, values);
+
+    }
+
     // Getting one Order
-    public int orderTotal(){
+    public int orderTotal() {
         int count = 0;
         SQLiteDatabase db = this.getReadableDatabase();
         String countQuery = "SELECT * FROM " + TABLE_ORDER;
@@ -120,7 +134,7 @@ public class DBHandler extends SQLiteOpenHelper {
         return count;
     }
 
-    public int newOrderNum(){
+    public int newOrderNum() {
 
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -130,12 +144,44 @@ public class DBHandler extends SQLiteOpenHelper {
         return (int) stmt.simpleQueryForLong();
 
     }
-    public Cursor orderListView(){
+
+    public Cursor orderListView() {
         SQLiteDatabase db = this.getReadableDatabase();
         String query = "SELECT order_num AS _id, open_date FROM " + TABLE_ORDER + " WHERE is_open = 1 ";
         Cursor c = db.rawQuery(query, null);
         return c;
     }
 
+    public Cursor itemListView(int n) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT "+KEY_ORDER_NUM+" AS _id, "+KEY_ITEM_NAME+ " , "
+                +KEY_COMMENTS+" , "+KEY_PRICE+" FROM " + TABLE_ITEM
+                + " WHERE forder_num = " + n;
+        Cursor c = db.rawQuery(query, null);
+        return c;
+    }
+
+    public void deleteItem(){
+
+    }
+
+    public void closeOrder(int n){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String strSQL = "UPDATE "+ TABLE_ORDER+" SET "+KEY_ISOPEN+" = 0 WHERE "+KEY_ORDER_NUMBER+" = "+ n;
+
+        db.execSQL(strSQL);
+
+    }
+
+    public double orderTotal(int n){
+        SQLiteDatabase db = this.getReadableDatabase();
+        final SQLiteStatement stmt = db
+                .compileStatement("SELECT SUM(Item.price) FROM Item WHERE Item.forder_num = "+ n);
+
+        String s = (String) stmt.simpleQueryForString();
+        double total = Double.parseDouble(s);
+        return total;
+    }
 
 }

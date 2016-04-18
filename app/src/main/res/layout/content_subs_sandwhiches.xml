@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Subs and Sandwhiches"
+        android:text="Subs and Sandwiches"
         android:id="@+id/SubsSandwhichesTitle"
         android:layout_below="@+id/imageView10"
         android:layout_centerHorizontal="true"
@@ -142,7 +142,7 @@
         <Button
             android:layout_width="200dp"
             android:layout_height="100dp"
-            android:text="The Sandwhich"
+            android:text="The Sandwich"
             android:id="@+id/sandwhichBtn"
             android:layout_row="1"
             android:layout_column="3"
@@ -291,4 +291,15 @@
             android:typeface="serif" />
 
     </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/orderNumberDisp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/subsGridLayout"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:typeface="serif" />
 </RelativeLayout>

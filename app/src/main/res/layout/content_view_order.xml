@@ -36,46 +36,55 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="  Remove  "
-        android:id="@+id/button2"
-        android:layout_marginBottom="61dp"
+        android:text="Complete Order"
+        android:id="@+id/completeBtn"
+        android:textSize="40dp"
         android:typeface="serif"
-        android:enabled="true"
-        android:textSize="40dp"
+        android:layout_marginBottom="79dp"
+        android:padding="20dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_toEndOf="@+id/imageView6" />
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="  back   "
-        android:id="@+id/backButton"
-        android:layout_alignTop="@+id/button2"
-        android:layout_alignParentStart="true"
-        android:textSize="40dp"
-        android:typeface="serif" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Complete "
-        android:id="@+id/button3"
-        android:textSize="40dp"
-        android:layout_alignTop="@+id/button2"
-        android:layout_alignParentEnd="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/orderTotalDisp"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:layout_above="@+id/textView8"
+        android:layout_alignEnd="@+id/listView2"
+        android:layout_marginEnd="71dp"
         android:typeface="serif" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Order Total:"
-        android:id="@+id/textView11"
-        android:layout_marginBottom="146dp"
+        android:id="@+id/orderNumDisp"
         android:textColor="#ffffff"
-        android:layout_marginEnd="100dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:textSize="35dp" />
+        android:layout_alignTop="@+id/orderTotalDisp"
+        android:layout_alignParentStart="true"
+        android:textSize="30dp"
+        android:typeface="serif" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView2"
+        android:layout_below="@+id/textView8"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/completeBtn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Put on hold"
+        android:id="@+id/onHoldbtn"
+        android:textSize="40dp"
+        android:padding="20dp"
+        android:typeface="serif"
+        android:layout_below="@+id/listView2"
+        android:layout_toStartOf="@+id/imageView6" />
 
 </RelativeLayout>
