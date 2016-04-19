@@ -104,11 +104,11 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/orderNumDisp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
         android:textSize="30dp"
         android:textColor="#ffffff"
-        android:typeface="serif" />
+        android:typeface="serif"
+        android:layout_above="@+id/italianBeefText"
+        android:layout_alignEnd="@+id/backButton" />
 
     <TextView
         android:layout_width="wrap_content"

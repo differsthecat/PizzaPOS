@@ -297,9 +297,9 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/orderNumberDisp"
-        android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/subsGridLayout"
         android:textColor="#ffffff"
         android:textSize="30sp"
-        android:typeface="serif" />
+        android:typeface="serif"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/subsGridLayout" />
 </RelativeLayout>

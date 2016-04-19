@@ -38,12 +38,11 @@
         android:layout_height="wrap_content"
         android:text="Remove"
         android:id="@+id/removeButton"
-        android:layout_marginEnd="84dp"
-        android:background="#e7e7e7"
         android:textColor="#6e0000"
         android:padding="16dp"
         android:enabled="true"
+        android:clickable="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:clickable="true" />
+        android:layout_marginEnd="60dp" />
 </RelativeLayout>

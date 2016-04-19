@@ -25,29 +25,25 @@ import android.widget.TextView;
 
 public class DBHandler extends SQLiteOpenHelper {
     // Database Version
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     // Database Name
     public static final String DATABASE_NAME = "Orders";
 
     // Order table name
     public static final String TABLE_ORDER = "Orders";
     // Order table Columns names
-    public static final String KEY_ROWID = "_id";
-    public static final int COL_ROWID = 0;
-
     public static final String KEY_ORDER_NUMBER = "order_num";
     public static final String KEY_DATE = "open_date";
     public static final String KEY_ISOPEN = "is_open";
+    public static final String KEY_USER = "user";
 
     //Item table name
     public static final String TABLE_ITEM = "Item";
-
     //ITem table column names
     public static final String KEY_ORDER_NUM = "forder_num";
     public static final String KEY_ITEM_NAME = "item_name";
     public static final String KEY_PRICE = "price";
     public static final String KEY_COMMENTS = "comments";
-    //Extras will handle special items like toppings.
     public static final String KEY_EXTRAS = "extras";
 
 
@@ -63,7 +59,8 @@ public class DBHandler extends SQLiteOpenHelper {
         String CREATE_ORDER_TABLE = "CREATE TABLE " + TABLE_ORDER + "("
                 + KEY_ORDER_NUMBER + " INTEGER PRIMARY KEY, "
                 + KEY_DATE + " TEXT, "
-                + KEY_ISOPEN + " INTEGER )";
+                + KEY_ISOPEN + " INTEGER, "
+                + KEY_USER + "INTEGER )";
         db.execSQL(CREATE_ORDER_TABLE);
 
         //Creates the 'Items' table
@@ -162,25 +159,41 @@ public class DBHandler extends SQLiteOpenHelper {
         return c;
     }
 
-    public void deleteItem(){
+    public void deleteItem(int n){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String strSQL = "DELETE FROM "+TABLE_ITEM+" WHERE "+KEY_ORDER_NUM+" = "+ n ;
+        db.execSQL(strSQL);
+        db.close();
 
     }
 
+    //Closes an order.
+    //Sets isOpen to 0
     public void closeOrder(int n){
         SQLiteDatabase db = this.getReadableDatabase();
         String strSQL = "UPDATE "+ TABLE_ORDER+" SET "+KEY_ISOPEN+" = 0 WHERE "+KEY_ORDER_NUMBER+" = "+ n;
-
         db.execSQL(strSQL);
 
     }
 
+    //Gets the order total to display in View Order
     public double orderTotal(int n){
+        double total;
         SQLiteDatabase db = this.getReadableDatabase();
         final SQLiteStatement stmt = db
                 .compileStatement("SELECT SUM(Item.price) FROM Item WHERE Item.forder_num = "+ n);
 
         String s = (String) stmt.simpleQueryForString();
-        double total = Double.parseDouble(s);
+
+        //Null value check
+        //If thereis nothing in the order, set the total price to 0
+        if (s == null){
+           total = 0.00;
+        }
+        else {
+            total = Double.parseDouble(s);
+
+        }
         return total;
     }
 

@@ -52,7 +52,15 @@ public class ViewOrder extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Button removeBtn = (Button) view.findViewById(R.id.removeButton);
+                db.deleteItem(orderNumber);
 
+                Cursor cursor = db.itemListView(orderNumber);
+                String[] fromFieldNames = new String[]{DBHandler.KEY_ITEM_NAME, DBHandler.KEY_COMMENTS, DBHandler.KEY_PRICE};
+                int[] toViewOrders = new int[]{R.id.itemName, R.id.itemComments, R.id.itemPrice};
+                SimpleCursorAdapter myCursorAdapter;
+                myCursorAdapter = new SimpleCursorAdapter(getBaseContext(), R.layout.view_items_layout, cursor, fromFieldNames, toViewOrders, 0);
+                ListView myList = (ListView) findViewById(R.id.listView2);
+                myList.setAdapter(myCursorAdapter);
 
             }
         });
