@@ -33,18 +33,21 @@ public class RoastedVeggieWrap extends AppCompatActivity {
 
         final int orderNumber = extrasBundle.getInt("Order Number");
 
+
         TextView displayOrderNum;
         TextView textElement = (TextView) findViewById(R.id.orderNumberDisp);
         textElement.setText("Order Number: " + orderNumber); //leave this line to assign a specific text
 
         final DBHandler db = new DBHandler(this);
+        final int itemNum = (db.newItemNum() + 1);
 
         //Clicking "Soups and Salads opens up the sub menu of Soups/Salads.
         addToOrder.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //Needs to also add itm to order.
                 System.out.println(vegComments);
-                db.addItem(new Item(comments.getText().toString() , "N/A", orderNumber , "Roasted Veggie Wrap", 8.95));
+
+                db.addItem(new Item(comments.getText().toString() , "N/A", orderNumber , "Roasted Veggie Wrap", 8.95, itemNum));
 
                 //Create the bundle to pass the order number
                 Bundle bundle = new Bundle();

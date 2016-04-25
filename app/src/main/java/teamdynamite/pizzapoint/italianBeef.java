@@ -35,13 +35,15 @@ public class italianBeef extends AppCompatActivity {
         textElement.setText("Order Number: " + orderNumber); //leave this line to assign a specific text
 
         final DBHandler db = new DBHandler(this);
+        final int itemNum = (db.newItemNum() + 1);
 
         //Clicking "add to order" add the item to the order.
         addToOrder.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(italianBeef.this, MainMenu.class));
 
-                db.addItem(new Item(comments.getText().toString() , "N/A", orderNumber , "Italian Beef", 10.95));
+
+                db.addItem(new Item(comments.getText().toString() , "N/A", orderNumber , "Italian Beef", 10.95, itemNum));
 
                 //Create the bundle to pass the order number
                 Bundle bundle = new Bundle();

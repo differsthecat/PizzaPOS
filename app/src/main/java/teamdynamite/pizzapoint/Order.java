@@ -1,5 +1,8 @@
 package teamdynamite.pizzapoint;
 
+//This file contains all of the getters and setters for the database items.
+
+//This class contains the getters and setters for the Order class
 public class Order {
 
     private int orderNumber;
@@ -45,7 +48,7 @@ public class Order {
         return isOpen;
     }
 }
-
+//Getters and setters for the Item class.
 class Item {
 
     private String comments;
@@ -53,17 +56,31 @@ class Item {
     private int orderNum;
     private String itemName;
     private double price;
+    private int _id;
+
 
     public Item(){
 
     }
-    public Item(String comments, String extras, int orderNum, String itemName, double price){
+
+    //Getters and setters for the item columns
+    public Item(String comments, String extras, int orderNum, String itemName, double price, int _id){
 
         this.comments= comments;
         this.extras = extras;
         this.orderNum = orderNum;
         this.itemName = itemName;
         this.price = price;
+        this._id = _id;
+
+    }
+
+    public int getId() {
+        return _id;
+    }
+
+    public void setId(int _id) {
+        this._id = _id;
     }
 
     public String getExtras() {

@@ -32,17 +32,26 @@
         android:layout_toStartOf="@+id/removeButton"
         android:layout_marginEnd="126dp" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
+    <TextView
+        style="?android:attr/textAppearanceLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Remove"
+        android:text="Click on Item to Delete"
         android:id="@+id/removeButton"
-        android:textColor="#6e0000"
+        android:textColor="#fef9cf"
         android:padding="16dp"
-        android:enabled="true"
-        android:clickable="true"
+        android:textIsSelectable="false"
+        android:textSize="20dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="60dp" />
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/itemId"
+        android:layout_alignBottom="@+id/itemComments"
+        android:layout_toStartOf="@+id/itemComments"
+        android:visibility="invisible" />
 </RelativeLayout>
