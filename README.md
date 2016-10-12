@@ -1,7 +1,8 @@
 # PizzaPOS
 Point of Sale system for Lucarelli's Pizza. Mobile Android companion.
 
-***Please view raw version to see database structure***
+Database
+--------
 
 Uses SQLite database engine
 
@@ -18,17 +19,4 @@ class Order contains getters and setters for table Orders.
 class Item contains getters and setters for table Item.
 
 
-***Please view raw version to see database structure***
-
----------------------------Orders------------------------------
-|                                                             |
-|   ________Orders_______         _________Item_________      |
-|   | int order_Num     |         | int orderNum       |      |
-|   | String openDate   |         | String itemName    |      |
-|   | int isOpen        |         | double price       |      |
-|   |                   |         | String comments    |      |
-|   |                   |         | String extras      |      |
-|   |___________________|         |____________________|      |
-|                                                             |
-|                                                             |
----------------------------------------------------------------
+![pizzaposdb](https://cloud.githubusercontent.com/assets/8926729/19327721/5f791758-909e-11e6-8f61-81ba7f6dedbd.png)
