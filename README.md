@@ -2,21 +2,34 @@
 Point of Sale system for Lucarelli's Pizza. Mobile Android companion.
 
 Database
---------
-
-Uses SQLite database engine
+-------
+Pizza POS uses SQLite database engine for storing orders.
 
 Database Structure:
 
-Database title: Orders
+There are two tables in the Orders database:
 
-There are two tables in Orders:
-Table Orders: column int order_num, column String open_date, column int is_open (Functions as a boolean value)
-Table Items: colum int orderNum, column String itemName, column double price, column String comments, column String extras  
+```sql
+Create Table Orders (
+	order_num int,
+	open_date text,
+	is_open int -- Effectively boolean
+);
 
-class DBHelper conducts all database operations and including database methods and queries.
-class Order contains getters and setters for table Orders.
-class Item contains getters and setters for table Item.
+Create Table Items (
+	order_num int,
+	itemName text,
+	price double,
+	comments text,
+	extras text
+);
+
+```
+
+
+The `DBHelper` class conducts all database operations and including database methods and queries.
+The  `Order` class contains getters and setters for the `Orders` table.
+The `Item` class contains getters and setters for the `Item` table.
 
 
 ![pizzaposdb](https://cloud.githubusercontent.com/assets/8926729/19327721/5f791758-909e-11e6-8f61-81ba7f6dedbd.png)
